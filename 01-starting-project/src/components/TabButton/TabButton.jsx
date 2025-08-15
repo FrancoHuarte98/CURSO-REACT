@@ -1,11 +1,11 @@
-export default function TabButton({children, onSelect}){
+export default function TabButton({children, onSelect, isSelected}){
     //document.querySelector('button').addEventListener('click', () =>{}) De esta manera se haria en JavaScript estandar donde dentro de {definiriamos el 
     //accionar del botton} pero en react es mucho mas facil, Ya que react tiene codigo declarativo no como JavaScript que tiene codigo imperativo                                                                       
 
     
     return( 
     <li>
-        <button onClick={onSelect}>{children}</button>
+        <button className={isSelected ? 'active': undefined} onClick={onSelect}>{children}</button>
     </li>
     );
 }
